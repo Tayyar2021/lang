@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* الوضع الفاتح */
+body.light-mode {
+    background-color: white;
+    color: black;
+}
+
+/* الوضع الداكن */
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }
+dark{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    color: white;
+    background-color: rgb(220, 79, 79);}
+
+
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* تصميم خاص بالأجهزة الكبيرة */
+@media (min-width: 1024px) {
+    #content {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
+
+/* تصميم خاص بالأجهزة المتوسطة (أجهزة لوحية) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    header {
+        flex-direction: row;
+    }
+}
+
+/* تصميم خاص بالأجهزة الصغيرة (هواتف ذكية) */
+@media (max-width: 767px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    button {
+        margin-top: 10px;
+    }
+}
